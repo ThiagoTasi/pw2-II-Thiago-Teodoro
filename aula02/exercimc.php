@@ -13,35 +13,29 @@
         $imc = $peso / pow($altura, 2);
 
         switch($imc); {
-        case $imc< 18.5;
-        $classificacao = "abaixo do peso";
-        break;
-        }
-        case $imc < 25;{
-        $classificacao = "normal";
-        break;
-        }
-
-        case $imc < 30;{
-        $classificacao = "sobrepeso";
-        $obesidade = "obesidade grau I";
-        break;
-        }
-        case $imc < 40;{
-        $classificacao = "obesidade";
-        $obesidade = "grau II";
-        break;
-        }
-
-        default;
-        $clasificacao = "obesidade grave";
-        $obesidade = "grau III";
-        break;
+           case $imc< 18.5;
+                $classificacao = "abaixo do peso";
+               break;
+           case $imc < 20;{
+                $classificacao = "Normal";
+               break;
+           case $imc < 30;{
+                $classificacao = "Sobrepeso";
+                $obesidade = "Obesidade Grau I";
+               break;
+           case $imc < 40;{
+                $classificacao = "Obesidade";
+                $obesidade = "Grau II";
+               break;
+          default;
+              $clasificacao = "Obesidade Grave";
+              $obesidade = "Grau III";
+              break;
         }
 
-        echo "<p>peso: $peso kg</p>";
-        echo "<p>altura: $altura cm</p>";
-        echo "<p>imc: $peso imc</p>";
+        echo "<p>Peso: $peso kg</p>";
+        echo "<p>Altura: $altura cm</p>";
+        echo "<p>IMC: $peso imc</p>";
 
         echo "<br /><p>classificacao:$classificacao</p>";
         if($imc > 29.9){
