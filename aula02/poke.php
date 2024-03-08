@@ -10,9 +10,11 @@
     <?php
     $pokemons = array("pikachu","Charizard";"bubassauro","Squirtle","Eeavee");
     foreach($pokemons as $pokemon){
-        if $pokemon."<br>"
+        if ($pokemon !== "Charmander"){
         echo $pokemon. "<br>";
+        }
     }
+            
     ?>
     
 </body>
