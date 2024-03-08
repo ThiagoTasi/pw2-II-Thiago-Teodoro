@@ -40,7 +40,7 @@
         echo "<p>Altura: $altura cm</p>";
         echo "<p>IMC: $imc</p>";
 
-        echo "<br /><p>Classificação: $classificacao</p>";
+        echo "<br /><p>Classificaçao: $classificacao</p>";
         if($imc > 29.9) {
             echo "<p>Obesidade: $obesidade</p>";
         }
