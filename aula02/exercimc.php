@@ -28,7 +28,7 @@
                 $obesidade = "Grau II";
                break;
         default:
-              $clasificacao = "Obesidade Grave";
+              $classificacao = "Obesidade Grave";
               $obesidade = "Grau III";
               break;
         }
@@ -37,7 +37,7 @@
         echo "<p>Altura: $altura cm</p>";
         echo "<p>IMC: $imc</p>";
 
-        echo "<br /><p>classificacao: $classificacao</p>";
+        echo "<br /><p>Classificacao: $classificacao</p>";
         if($imc > 29.9){
             echo "<p>Obesidade: $obesidade</p>";
         }
