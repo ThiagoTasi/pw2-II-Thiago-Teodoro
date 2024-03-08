@@ -14,20 +14,20 @@
 
         switch($imc); {
            case $imc< 18.5;
-                $classificacao = "abaixo do peso";
+                $classificacao = "Abaixo do peso";
                break;
-           case $imc < 20;{
+           case $imc < 20;
                 $classificacao = "Normal";
                break;
-           case $imc < 30;{
+           case $imc < 30;
                 $classificacao = "Sobrepeso";
                 $obesidade = "Obesidade Grau I";
                break;
-           case $imc < 40;{
+           case $imc < 40;
                 $classificacao = "Obesidade";
                 $obesidade = "Grau II";
                break;
-          default;
+        default:
               $clasificacao = "Obesidade Grave";
               $obesidade = "Grau III";
               break;
@@ -35,11 +35,11 @@
 
         echo "<p>Peso: $peso kg</p>";
         echo "<p>Altura: $altura cm</p>";
-        echo "<p>IMC: $peso imc</p>";
+        echo "<p>IMC: $imc</p>";
 
-        echo "<br /><p>classificacao:$classificacao</p>";
+        echo "<br /><p>classificacao: $classificacao</p>";
         if($imc > 29.9){
-            echo "<p>obesidade: $obesidade</p>";
+            echo "<p>Obesidade: $obesidade</p>";
         }
 
      
