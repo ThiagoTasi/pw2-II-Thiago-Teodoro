@@ -29,7 +29,7 @@ try {
         $nacionalidade = $_POST['nacionalidade'];
 
         // Prepara a consulta SQL
-        $sql = "INSERT INTO lista (nome, endereco, cidade, bairro, estado, email, telefone, celular, cpf, genero, data_nascimento, profissao, nacionalidade)
+        $sql = "INSERT INTO agenda (nome, endereco, cidade, bairro, estado, email, telefone, celular, cpf, genero, data_nascimento, profissao, nacionalidade)
                 VALUES (:nome, :endereco, :cidade, :bairro, :estado, :email, :telefone, :celular, :cpf, :genero, :data_nascimento, :profissao, :nacionalidade)";
 
         // Prepara a declaração
