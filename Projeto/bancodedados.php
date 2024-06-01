@@ -65,6 +65,7 @@ try {
 <head>
     <title>Formulário PHP PDO com Tailwind CSS</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto py-8">
