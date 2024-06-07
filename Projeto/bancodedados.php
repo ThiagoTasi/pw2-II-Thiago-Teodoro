@@ -1,6 +1,6 @@
 <?php
 // Configurações do banco de dados
-$dsn = 'mysql:host=localhost;dbname=cadastro';
+$dsn = 'mysql:host=localhost;dbname=agenda';
 $username = 'root';
 $password = '';
 
@@ -29,7 +29,7 @@ try {
         $nacionalidade = $_POST['nacionalidade'];
 
         // Prepara a consulta SQL
-        $sql = "INSERT INTO lista (nome, endereco, cidade, bairro, estado, email, telefone, celular, cpf, genero, data_nascimento, profissao, nacionalidade)
+        $sql = "INSERT INTO agenda (nome, endereco, cidade, bairro, estado, email, telefone, celular, cpf, genero, data_nascimento, profissao, nacionalidade)
                 VALUES (:nome, :endereco, :cidade, :bairro, :estado, :email, :telefone, :celular, :cpf, :genero, :data_nascimento, :profissao, :nacionalidade)";
 
         // Prepara a declaração
@@ -67,12 +67,12 @@ try {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
+<body class="bg-red-100">
     <div class="container mx-auto py-8">
         <h2 class="text-2xl font-bold mb-4">Insira seus dados:</h2>
         <form method="POST" class="max-w-lg">
             <div class="mb-4">
-                <label for="nome" class="block text-gray-700">Nome:</label>
+                <label for="nome" class="block text-green-700">Nome:</label>
                 <input type="text" id="nome" name="nome" required="required" class="form-input mt-1 block w-full">
             </div>
             <div class="mb-4">

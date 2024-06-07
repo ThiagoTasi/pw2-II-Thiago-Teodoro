@@ -1,6 +1,6 @@
 /* Estilos básicos para o corpo */
 body {
-    background-color: #f7fafc;
+    background-color: #9ff09f;
     font-family: 'Arial', sans-serif;
 }
 
@@ -9,7 +9,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: #0408ff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
