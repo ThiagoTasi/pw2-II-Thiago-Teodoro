@@ -63,67 +63,80 @@ try {
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Agenda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .custom-input {
+            display: block; /* Faz com que o campo de entrada ocupe uma linha inteira */
+            width: calc(100% - 12px); /* Define a largura para ocupar toda a largura da div, subtraindo o padding */
+            padding: 5px; /* Adiciona um pequeno espaçamento interno para melhorar a aparência */
+            margin-top: 5px; /* Adiciona um pequeno espaçamento superior para separar os campos */
+            height: auto; /* Define a altura automática para que o campo de entrada sempre seja visível */
+        }
+    </style>
+    <title>Agenda</title>
 </head>
 <body class="block text-green-700">
     <div class="container mx-auto py-8">
-        <h2 class="text-2xl font-bold mb-4">Insira seus dados:</h2>
-        <form method="POST" class="max-w-lg">
-            <div class="mb-4">
-                <label for="nome" class="block text-green-700">Nome:</label>
-                <input type="text" id="nome" name="nome" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="endereco" class="block text-green-700">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="cidade" class="block text-green-700">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="bairro" class="block text-green-700">Bairro:</label>
-                <input type="text" id="bairro" name="bairro" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="estado" class="block text-green-700">Estado:</label>
-                <input type="text" id="estado" name="estado" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="email" class="block text-green-700">Email:</label>
-                <input type="email" id="email" name="email" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="telefone" class="block text-green-700">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="celular" class="block text-green-700">Celular:</label>
-                <input type="tel" id="celular" name="celular" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="cpf" class="block text-green-700">CPF:</label>
-                <input type="text" id="cpf" name="cpf" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="genero" class="block text-green-700">Genero:</label>
-                <input type="text" id="genero" name="genero" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="data_nascimento" class="block text-green-700">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento" name="data_nascimento" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="profissao" class="block text-green-700">Profissão:</label>
-                <input type="text" id="profissao" name="profissao" required class="form-input mt-1 block w-full">
-            </div>
-            <div class="mb-4">
-                <label for="nacionalidade" class="block text-green-700">Nacionalidade:</label>
-                <input type="text" id="nacionalidade" name="nacionalidade" required class="form-input mt-1 block w-full">
-            </div>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
-        </form>
+        <div class="border-2 border-black">
+            <h2 class="text-2xl font-bold mb-4">Insira seus dados:</h2>
+            <form method="POST" class="max-w-lg">
+                <div class="mb-4">
+                    <label for="nome" class="custom-label block text-green-700">Nome:</label>
+                    <input type="text" id="nome" name="nome" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="endereco" class="custom-label block text-green-700">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="cidade" class="custom-label block text-green-700">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="bairro" class="custom-label block text-green-700">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="estado" class="custom-label block text-green-700">Estado:</label>
+                    <input type="text" id="estado" name="estado" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="custom-label block text-green-700">Email:</label>
+                    <input type="email" id="email" name="email" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="telefone" class="custom-label block text-green-700">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="celular" class="custom-label block text-green-700">Celular:</label>
+                    <input type="tel" id="celular" name="celular" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="cpf" class="custom-label block text-green-700">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="genero" class="custom-label block text-green-700">Genero:</label>
+                    <input type="text" id="genero" name="genero" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="data_nascimento" class="custom-label block text-green-700">Data de Nascimento:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="profissao" class="custom-label block text-green-700">Profissão:</label>
+                    <input type="text" id="profissao" name="profissao" required class="border-2 border-gray-900" size="100">
+                </div>
+                <div class="mb-4">
+                    <label for="nacionalidade" class="custom-label block text-green-700">Nacionalidade:</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade" required class="border-2 border-gray-900" size="100">
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
