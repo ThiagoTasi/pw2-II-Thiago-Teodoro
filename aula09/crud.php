@@ -68,9 +68,20 @@ $nomes = getNomes();
 <table border="border">
     <tr>
         <th>ID</th>
-        <th>
+        <th>Nome</th>
+        <th>Ações</th>
+</tr>
+<?php foreach ($nomes as $nome):?>
+    <tr>
+        <td><?php echo $nome['id']; ?></td>
+        <td><?php echo $nome['nome']; ?></td>
+        <td>
+            <a href="?acao=editar&id=<?php echo $nome['id']; ?>
+            &nome=<?php echo urlencode($nome['nome']); ?>">Excluir</a>
+</td>
+</tr>
+<?php endforeach; ?>
+</table>
+<?php $db->close(); ?>
 
 
-}
-
-}

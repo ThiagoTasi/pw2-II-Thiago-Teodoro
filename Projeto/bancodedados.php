@@ -79,6 +79,7 @@ try {
 </head>
 <body class="block text-green-700">
     <div class="container mx-auto py-8">
+<<<<<<< HEAD
         <div class="border-2 border-black">
             <h2 class="text-2xl font-bold mb-4">Insira seus dados:</h2>
             <form method="POST" class="max-w-lg">
@@ -137,6 +138,64 @@ try {
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
             </form>
         </div>
+=======
+        <h2 class="text-2xl font-bold mb-4">Insira seus dados:</h2>
+        <form method="POST" class="max-w-lg">
+            <div class="mb-4">
+                <label for="nome" class="block text-green-700">Nome:</label>
+                <input type="text" id="nome" name="nome" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="endereco" class="block text-green-700">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="cidade" class="block text-green-700">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="bairro" class="block text-green-700">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="estado" class="block text-green-700">Estado:</label>
+                <input type="text" id="estado" name="estado" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-green-700">Email:</label>
+                <input type="email" id="email" name="email" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="telefone" class="block text-green-700">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="celular" class="block text-green-700">Celular:</label>
+                <input type="tel" id="celular" name="celular" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="cpf" class="block text-green-700">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="genero" class="block text-green-700">Genero:</label>
+                <input type="text" id="genero" name="genero" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="data_nascimento" class="block text-green-700">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="profissao" class="block text-green-700">Profissão:</label>
+                <input type="text" id="profissao" name="profissao" required class="border-2 border-gray-600">
+            </div>
+            <div class="mb-4">
+                <label for="nacionalidade" class="block text-green-700">Nacionalidade:</label>
+                <input type="text" id="nacionalidade" name="nacionalidade" required class="border-2 border-gray-600">
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+        </form>
+>>>>>>> 23abd9909d8f33077492720a9957904bb1bb9375
     </div>
 </body>
 </html>
