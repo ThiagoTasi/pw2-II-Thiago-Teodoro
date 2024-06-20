@@ -76,11 +76,7 @@ try {
         <form method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
                 <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
-<<<<<<< HEAD
                 <input type="text" id="nome" name="nome" required class="border-2 border-gray-900" size="100">
-=======
-                <input type="text" id="nome" name="nome" required class="border-2 border-gray-900" size="30">
->>>>>>> 23abd9909d8f33077492720a9957904bb1bb9375
             </div>
             <div class="mb-4">
                 <label for="endereco" class="block text-gray-700 text-sm font-bold mb-2">Endereço:</label>
