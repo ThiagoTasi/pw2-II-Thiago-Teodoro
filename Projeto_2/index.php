@@ -132,6 +132,7 @@ try {
                 <a href="crud.php">
                     <input type="submit" name="acao" id="acao" value="adicionar" formaction="crud.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
                     <input type="reset" id="acao" value="excluir" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
+                    <input type="submit"
                 </a>
             </div>
         </form>
