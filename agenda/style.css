@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    padding-top: 3%;
+    background-color: rgb(230, 240, 230); /* Novo fundo em tom de verde claro */
+}
+
+.conteudo {
+    border: 0.125rem solid #4CAF50; /* Novo borda em tom de verde */
+    border-radius: 2%;
+    padding: 1%;
+    margin: 0 auto;
+    width: 45%;
+}
+
+.titulo {
+    margin-bottom: 5%;
+    color: #4CAF50; /* Nova cor do título em verde */
+}
+
+.lbl_titulo {
+    color: #4CAF50; /* Nova cor do rótulo do título em verde */
+}
+
+#botao, #botao_atualizar {
+    background-color: #4CAF50; /* Nova cor de fundo dos botões em verde */
+    border-color: #4CAF50; /* Nova cor da borda dos botões em verde */
+}
+
+#botao_atualizar {
+    margin-top: 6%;
+}
+
+.table {
+    margin-right: 2%;
+}
+
+#style_table {
+    overflow-x: auto;
+}
+
+.conteiner {
+    background-color: rgb(200, 220, 200); /* Nova cor de fundo do contêiner em tom de verde claro */
+}
+
+/* Alteração da cor da palavra "agenda" */
+.agenda {
+    color: #4CAF50; /* Nova cor da palavra "agenda" em verde */
+}

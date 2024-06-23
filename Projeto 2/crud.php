@@ -14,7 +14,7 @@ function getContatos() {
     return $contatos;
 }
 
-function adicionarContato($nome,$endereco,$cidade,$bairro,$estado,$email,$telefone,$celular,$cpf,$genero,$data_nascimento,$profissao,$nacionalidade)";{
+function adicionarAgenda($nome,$endereco,$cidade,$bairro,$estado,$email,$telefone,$celular,$cpf,$genero,$data_nascimento,$profissao,$nacionalidade)";{
     global $db;
     $sql = "INSERT INTO contatos(nome,endereco,cidade,bairro,estado,email,telefone,celular,cpf,genero,data_nascimento,profissao,nacionalidade) VALUES('$nome','$endereco','$cidade','$bairro','$estado','$email','$telefone','$celular','$cpf','$genero','$data_nascimento','$profissao','$nacionalidade')";
     $db->query($sql);
