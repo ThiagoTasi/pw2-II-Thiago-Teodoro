@@ -60,6 +60,8 @@ try {
     echo "Erro: " . $e->getMessage();
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -73,7 +75,7 @@ try {
         <h2 class="text-2xl font-bold mb-4">Insira seus dados:</h2>
     </div>
     <div class="container mx-auto py-8">
-        <form method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
                 <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
                 <input type="text" id="nome" name="nome" required class="border-2 border-gray-900" size="100">
@@ -127,9 +129,17 @@ try {
                 <input type="text" id="nacionalidade" name="nacionalidade" required class="border-2 border-gray-900" size="100">
             </div>
             <div class="flex items-center justify-between">
-                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+                <a href="crud.php">
+                    <input type="submit" name="acao" id="acao" value="adicionar" formaction="crud.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
+                    <input type="reset" id="acao" value="excluir" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
+                    <input type="submit"
+                </a>
             </div>
         </form>
     </div>
+    <footer>
+        
+    </footer>
+        
 </body>
 </html>

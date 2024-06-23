@@ -5,7 +5,7 @@ $db = new mysqli('localhost', 'root', '', 'agenda');
 // Funções para CRUD
 function getContatos() {
     global $db;
-    $sql ="SELECT * FROM contatos";
+    $sql ="SELECT * FROM agenda";
     $result = $db->query($sql);
     $contatos = [];
     while ($row = $result->fetch_assoc()) {
@@ -14,9 +14,13 @@ function getContatos() {
     return $contatos;
 }
 
+<<<<<<< HEAD:Projeto 2/crud.php
 function adicionarAgenda($nome,$endereco,$cidade,$bairro,$estado,$email,$telefone,$celular,$cpf,$genero,$data_nascimento,$profissao,$nacionalidade)";{
+=======
+function adicionarContato($nome,$endereco,$cidade,$bairro,$estado,$email,$telefone,$celular,$cpf,$genero,$data_nascimento,$profissao,$nacionalidade){
+>>>>>>> 90cc5f7cb25b18add209e3d2f9a3f2cff41ef1f1:Projeto_2/crud.php
     global $db;
-    $sql = "INSERT INTO contatos(nome,endereco,cidade,bairro,estado,email,telefone,celular,cpf,genero,data_nascimento,profissao,nacionalidade) VALUES('$nome','$endereco','$cidade','$bairro','$estado','$email','$telefone','$celular','$cpf','$genero','$data_nascimento','$profissao','$nacionalidade')";
+    $sql = "INSERT INTO agenda(nome,endereco,cidade,bairro,estado,email,telefone,celular,cpf,genero,data_nascimento,profissao,nacionalidade) VALUES('$nome','$endereco','$cidade','$bairro','$estado','$email','$telefone','$celular','$cpf','$genero','$data_nascimento','$profissao','$nacionalidade')";
     $db->query($sql);
 }
 
@@ -33,33 +37,34 @@ function excluirContato($id) {
 }
 
 //Açoes do CRUD
-$acao = isset($-GET['acao'])? $_GET['acao'] :null;
-$id = isset($-GET['id']) ? intval($_GET['id']):0;
-$nome = isset($-POST['nome']) ? 4_POST['nome'] : '';
-$endereco = isset($-POST['endereco']) ? 4_POST['endereco'] : '';
-$cidade = isset($-POST['cidade']) ? 4_POST['cidade'] : '';
-$bairro = isset($-POST['bairro']) ? 4_POST['bairro'] : '';
-$estado = isset($-POST['estado']) ? 4_POST['estado'] : '';
-$email = isset($-POST['email']) ? 4_POST['email'] : '';
-$telefone = isset($-POST['telefone']) ? 4_POST['telefone'] : '';
-$celular = isset($-POST['celular']) ? 4_POST['celular'] : '';
-$cpf = isset($-POST['cpf']) ? 4_POST['cpf'] : '';
-$genero = isset($-POST['genero']) ? 4_POST['genero'] : '';
-$data_nascimento = isset($-POST['data_nascimento']) ? 4_POST['data_nascimento'] : '';
-$profissao = isset($-POST['profissao']) ? 4_POST['profissao'] : '';
+$acao = isset($_POST['acao']) ? $_POST['acao'] : '';
+$id = isset($_POST['id']) ? intval($_POST['id']) : 0;
+$nome = isset($_POST['nome']) ? $_POST['nome'] : '';
+$endereco = isset($_POST['endereco']) ? $_POST['endereco'] : '';
+$cidade = isset($_POST['cidade']) ? $_POST['cidade'] : '';
+$bairro = isset($_POST['bairro']) ? $_POST['bairro'] : '';
+$estado = isset($_POST['estado']) ? $_POST['estado'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
+$celular = isset($_POST['celular']) ? $_POST['celular'] : '';
+$cpf = isset($_POST['cpf']) ? $_POST['cpf'] : '';
+$genero = isset($_POST['genero']) ? $_POST['genero'] : '';
+$data_nascimento = isset($_POST['data_nascimento']) ? $_POST['data_nascimento'] : '';
+$profissao = isset($_POST['profissao']) ? $_POST['profissao'] : '';
+$nacionalidade = isset($_POST['nacionalidade']) ? $_POST['nacionalidade'] : '';
  
 if($acao === 'adicionar') {
-    adicionarContato($nome,$endereco,$cidade,$bairro,$estado,$email,$telefone,$celular,$cpf,$genero,$data_nascimento,$profissao,$nacionalidade)
-    header('Location: agenda.php');
+    adicionarContato($nome,$endereco,$cidade,$bairro,$estado,$email,$telefone,$celular,$cpf,$genero,$data_nascimento,$profissao,$nacionalidade);
+    header('Location: index.php');
     exit();
 } elseif ($acao === 'editar') {
-    $id = intval($_GET['id']);
+    // $id = intval($_POST['id']);
     $nome = $_POST['nome'];
     $endereco = $_POST['endereco'];
     $cidade = $_POST['cidade'];
     $bairro = $_POST['bairro'];
     $estado = $_POST['estado'];
-    $email = $_POST['email'];"&ciade="
+    $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $celular = $_POST['celular'];
     $cpf = $_POST['cpf'];
@@ -79,6 +84,7 @@ if($acao === 'adicionar') {
 
 //Obter todos os nomes
 $contatos = getContatos();
+
 ?>
 
 <!DOCTYPE html>
@@ -91,64 +97,13 @@ $contatos = getContatos();
 </head>
 <body>
 </head>
+
 <body class="bg-gray-100">
     <div class="p-3 mb-2 bg-gray-700 text-white container text-center rounded">
         <h2 class="text-2xl font-bold mb-4">Insira seus dados:</h2>
     </div>
     <div class="container mx-auto py-8">
-        <form method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-                <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
-                <input type="text" id="nome" name="nome" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="endereco" class="block text-gray-700 text-sm font-bold mb-2">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="cidade" class="block text-gray-700 text-sm font-bold mb-2">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="bairro" class="block text-gray-700 text-sm font-bold mb-2">Bairro:</label>
-                <input type="text" id="bairro" name="bairro" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="estado" class="block text-gray-700 text-sm font-bold mb-2">Estado:</label>
-                <input type="text" id="estado" name="estado" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                <input type="email" id="email" name="email" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="telefone" class="block text-gray-700 text-sm font-bold mb-2">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="celular" class="block text-gray-700 text-sm font-bold mb-2">Celular:</label>
-                <input type="tel" id="celular" name="celular" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="cpf" class="block text-gray-700 text-sm font-bold mb-2">CPF:</label>
-                <input type="text" id="cpf" name="cpf" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="genero" class="block text-gray-700 text-sm font-bold mb-2">Genero:</label>
-                <input type="text" id="genero" name="genero" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="data_nascimento" class="block text-gray-700 text-sm font-bold mb-2">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento" name="data_nascimento" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="profissao" class="block text-gray-700 text-sm font-bold mb-2">Profissão:</label>
-                <input type="text" id="profissao" name="profissao" required class="border-2 border-gray-900" size="100">
-            </div>
-            <div class="mb-4">
-                <label for="nacionalidade" class="block text-gray-700 text-sm font-bold mb-2">Nacionalidade:</label>
-                <input type="text" id="nacionalidade" name="nacionalidade" required class="border-2 border-gray-900" size="100">
-            </div>
+        
             <div class="flex items-center justify-between">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
             </div>
